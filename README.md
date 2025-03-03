@@ -92,6 +92,88 @@ flask run
 
 9. Open page at http://127.0.0.1:5000
 
+
+### Windows
+
+1. Set up virtual environment
+
+
+```
+py -m venv .venv
+```
+
+
+2. Activate environment
+
+
+```
+.venv\Scripts\activate
+```
+
+
+3. Install pip + dependencies
+
+
+```
+py -m pip install --upgrade pip
+py -m pip install requests
+```
+
+
+4. Install pymongo
+
+
+```
+pip install pymongo
+```
+
+
+5. Install Flask
+
+
+```
+pip install Flask
+set FLASK_APP=app.py
+```
+
+
+6. Install MongoDB Community version via the zip file on the MongoDB official website
+
+
+7. Go to app
+
+
+```
+cd 2-web-app-ducklings\app
+```
+
+
+8. Set Mongo URI
+
+
+```
+set MONGO_URI='mongodb://localhost:27017/anatidelicious'
+```
+
+
+9. Install other additions
+
+
+```
+pip install flask_pymongo
+pip install flask_session
+pip install dotenv
+```
+
+
+10. Run
+
+
+```
+flask run
+```
+
+
 ## Task boards
 
 [Task Board Sprint 1 Link](https://github.com/orgs/software-students-spring2025/projects/10/)
