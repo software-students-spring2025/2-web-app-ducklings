@@ -158,7 +158,7 @@ def cart():
                 item['total'] = Cart.get_item_count(customer_id, item_id) * item.get('price')
                 cart_items.append(item)
     print(cart_items)
-    return rt('cart.html', cart_items=cart_items, total_items=total_items)
+    return rt('cart.html', cart_items=cart_items, total_items=total_items, total_price=total_price)
 
 
 @app.route('/remove_from_cart/<item_id>')
