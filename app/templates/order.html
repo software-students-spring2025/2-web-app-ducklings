@@ -14,7 +14,7 @@
         &emsp;
         <div class = "nav">
             <a class = "Back" href="{{ url_for('order') }}">
-                <p>Back</p>
+                Back
             </a>
             &emsp;
             <a class = "cart" href="{{ url_for('cart') }}">
@@ -35,7 +35,7 @@
                     <div class = "categoryB">
                         <img src = "../static/images/menuItems/{{item.item_id}}.jpg">
                         <div class = "itemInfo">
-                            <p class = "iDescription">{{ item.name }}:{{ item.description }}</p>
+                            <p class = "iDescription">{{ item.name }}: {{ item.description }}.</p>
                             <div class = "moreInfo">
                                 <p class = "price">${{ item.price }}.00</p>
                                 <p class = "calories">{{ item.calories }} calories</p>
@@ -46,7 +46,8 @@
                 <div class = "addCart">
                     <a href="{{ url_for('add_to_cart', item_id=item.item_id, category=category, query=query) }}">
                         <p>Add to Cart</p>
-                    </a>  
+                    </a> 
+                </div> 
             {% endfor %}
         </div>
         {% if query %}
@@ -56,7 +57,7 @@
     {% else %}
         <div class = "nav">
             <a class = "Back" href="{{ url_for('home') }}">
-                <p>Home</p>
+                Home
             </a>
             &emsp;
             <a class = "cart" href="{{ url_for('cart') }}">

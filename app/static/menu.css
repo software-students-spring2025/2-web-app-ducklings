@@ -1,11 +1,15 @@
 
+body {
+    background-color: #F7EDD3;
+    color: #B96B50;
+}
 
 #menu{
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 2250px;
-    margin-bottom: 120px;
+    margin-bottom: 240px;
 }
 
 form{
@@ -13,21 +17,28 @@ form{
     justify-content: center;
     margin-left: 100px;
     margin-right: 100px;
+    background-color: #F9DFA0;
+
 }
 
 input{
     width: 450px;
-    height: 50px;
+    height: 70px;
     font-size: 40px;
-    border: solid 2px black;
-    color: black;
+    border: solid #B96B50;
+    color: #B96B50;
+}
+
+input[type = "text"]{
+    background-color: #F8F5E5;
 }
 button{
     width: 300px;
-    height: 56px;
+    height: 76px;
     font-size: 40px;
-    background-color: #FADEC2;
-
+    background-color: #F9DFA0;
+    color: #B96B50;
+    border: solid #8f4a33;
 }
 
 .nav{
@@ -51,36 +62,40 @@ button{
 }
 
 .category{
-    border: solid 2px black;
-    width: 700px;
-    height: 240px;
+    width: 740px;
+    height: 280px;
     display: flex;
     flex-direction: row;
     margin-top: 100px;
     position: relative;
+    color: #B96B50;
+    border: solid 5px #B96B50;
+    background-color: #F8F5E5;
 }
 
 .categoryB{
-    border: solid 2px black;
-    width: 700px;
-    height: 240px;
+    width: 740px;
+    height: 280px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-top: 100px;
     position: relative;
+    color: #B96B50;
+    border: solid 5px #B96B50;
+    background-color: #F8F5E5;
 }
 
 img{
-    height: 240px;
-    width: 240px;
+    height: 280px;
+    width: 280px;
     object-fit: cover;
 }
 
 .title{
     font-size: 80px;
     text-align: center;
-    width: 460px
+    width: 500px
 }
 
 h1{
@@ -98,31 +113,34 @@ h2{
 a{
     font-size: 40px;
     text-decoration: none;
-    color:black;
+    color: #C88246;
 }
 
 a:visited{
-    color: black;
+    color: #C88246;
 }
 
 .Back {
-margin-top: 10%;
-margin-left: 10%;
-flex-direction: column;
-display: flex;
-text-align: center;
-justify-content: center;
-width: 20vw;
-height: 5vh;
-border: solid;
-font-size: 5vw;
+    margin-top: 10%;
+    margin-left: 10%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 20vw;
+    height: 5vh;
+    border: solid;
+    font-size: 5vw;
+    background-color: #F9DFA0;
+    color: #C88246;
+    border: solid #B96B50;
 }
 
 .itemInfo{
     text-align: center;
-    width: 460px;
-    font-size: 40px;
-    height: 240px;
+    width: 500px;
+    font-size: 45px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -139,13 +157,15 @@ font-size: 5vw;
 
 .addCart{
     background-color: #FADEC2;
-    width: 700px;
+    width: 740px;
     height: 100px;
-    border-radius: 90px;
-    border: solid 2px #eca762;
+    background-color: #F9DFA0;
+    color: #C88246;
+    border: solid 5px #B96B50;
     text-align: center;
     justify-content: center;
     line-height: 20px;
+    
 }
 
 .iDescription{
