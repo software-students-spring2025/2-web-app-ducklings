@@ -49,20 +49,19 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+3. Enter app
 
-3. Install dependencies
+```
+cd app/
+```
+
+4. Install dependencies
 
 
 ```
 pip install -r requirements.txt
 ```
 
-
-4. Enter app
-
-```
-cd app/
-```
 
 5. Set Flask app environment variable
 
@@ -87,7 +86,7 @@ export MONGO_URI='mongodb://localhost:27017/anatidelicious'
 8. Run App
 
 ```
-flask run
+python -m flask run
 ```
 
 9. Open page at http://127.0.0.1:5000
