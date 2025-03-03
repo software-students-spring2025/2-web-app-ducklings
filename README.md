@@ -68,8 +68,8 @@ pip install -r requirements.txt
 
 ```
 export FLASK_APP=app.py
-
 ```
+
 6. Start MongoDB
 
 ```
