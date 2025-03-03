@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/itemInfo.css">
     <title>{{ item.name }}</title>
 </head>
 <body>
-    <a href="{{ url_for('order', category=item.category) }}">Back to {{ item.category }}</a>
-    <h1>{{ item.name }}</h1>
-    <p>{{ item.description }}</p>
-    <p>{{ item.description }}</p>
-    <p>Calories: {{ item.calories }}</p>
-    <p>Allergens: {{ item.allergy_info }}</p>
+    <div class = "nav">
+        <a class = "Back" href="{{ url_for('order', category=item.category) }}">
+            <p>Back to {{item.category}}</p>
+        </a>
+        &emsp;
+        <a class = "cart" href="{{ url_for('cart') }}">
+            <img id ="cartImg" src = "../static/cart_icon.png"/>
+        </a>
+        &emsp;
+    </div>
+
+    <div id = "wrap">
+        <div id = "itemDiv">
+            <img id = "itemImg" src = "../static/images/menuItems/{{item.item_id}}.jpg"/>
+            
+            <div class = "infoOne">
+                <h2 class = "noSpace">{{ item.name }}</h1>
+                <p class = "noSpace">Price: ${{item.price}}.00</p>
+            </div>
+            <div class = "infoTwo">
+                <p>{{ item.description }}</p>
+                <p class = "noSpace">Calories: {{ item.calories }}</p>
+                <p class = "noSpace">Allergens:</p>
+                <p class = "noSpace">{{ item.allergy_info }}</p>
+            </div>
+            <a class = "button" href="{{ url_for('add_to_cart', item_id=item.item_id, category=category, query=query) }}">Add to Cart</a>
+        </div>
+    </div>
     <b></b>
-    <a href="{{ url_for('add_to_cart', item_id=item.item_id, category=category, query=query) }}">Add to Cart</a>
+
 </body>
 </html>
