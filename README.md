@@ -30,9 +30,21 @@ Our product aims to provide information and purchase functions to consumers who 
 
 ## Steps necessary to run the software
 
+
+1. First, clone the respository:
+
+```
+git clone https://github.com/software-students-spring2025/2-web-app-ducklings.git
+```
+2. Then change directories into the repository:
+
+```
+cd 2-web-app-ducklings
+```
+
 ### Mac
 
-1. Set up virtual environment
+3. Set up virtual environment
 
 
 ```
@@ -40,20 +52,20 @@ python3 -m venv venv
 ```
 
 
-2. Activate environment
+4. Activate environment
 
 
 ```
 source venv/bin/activate
 ```
 
-3. Enter app
+5. Enter app
 
 ```
 cd app/
 ```
 
-4. Install dependencies
+6. Install dependencies
 
 
 ```
@@ -61,38 +73,38 @@ pip install -r requirements.txt
 ```
 
 
-5. Set Flask app environment variable
+7. Set Flask app environment variable
 
 
 ```
 export FLASK_APP=app.py
 ```
 
-6. Start MongoDB
+8. Start MongoDB
 
 ```
 brew install mongodb-community@6.0
 brew services start mongodb-community@6.0
 ```
 
-7. Set Mongo URI
+9. Set Mongo URI
 
 ```
 export MONGO_URI='mongodb://localhost:27017/anatidelicious'
 ```
 
-8. Run App
+10. Run App
 
 ```
 python -m flask run
 ```
 
-9. Open page at http://127.0.0.1:5000
+11. Open page at http://127.0.0.1:5000
 
 
 ### Windows
 
-1. Set up virtual environment
+3. Set up virtual environment
 
 
 ```
@@ -100,7 +112,7 @@ py -m venv .venv
 ```
 
 
-2. Activate environment
+4. Activate environment
 
 
 ```
@@ -108,7 +120,7 @@ py -m venv .venv
 ```
 
 
-3. Install pip + dependencies
+5. Install pip + dependencies
 
 
 ```
@@ -117,7 +129,7 @@ py -m pip install requests
 ```
 
 
-4. Install pymongo
+6. Install pymongo
 
 
 ```
@@ -125,7 +137,7 @@ pip install pymongo
 ```
 
 
-5. Install Flask
+7. Install Flask
 
 
 ```
@@ -134,10 +146,10 @@ set FLASK_APP=app.py
 ```
 
 
-6. Install MongoDB Community version via the zip file on the MongoDB official website
+8. Install MongoDB Community version via the zip file on the MongoDB official website
 
 
-7. Go to app
+9. Go to app
 
 
 ```
@@ -145,7 +157,7 @@ cd 2-web-app-ducklings\app
 ```
 
 
-8. Set Mongo URI
+10. Set Mongo URI
 
 
 ```
@@ -153,7 +165,7 @@ set MONGO_URI='mongodb://localhost:27017/anatidelicious'
 ```
 
 
-9. Install other additions
+11. Install other additions
 
 
 ```
@@ -163,14 +175,14 @@ pip install dotenv
 ```
 
 
-10. Run
+12. Run
 
 
 ```
 flask run
 ```
 
-11. Open page at http://127.0.0.1:5000
+13. Open page at http://127.0.0.1:5000
 
 
 
