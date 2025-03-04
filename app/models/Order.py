@@ -7,7 +7,7 @@ from .Cart import Cart
 
 '''
 Order record with payment information, can be accessed later
-Currently orderID is just the number order it is, discuss to change
+Currently orderID is just the number order it is
 '''
 
 class Order:
@@ -35,7 +35,6 @@ class Order:
         last_four = card_number[-4:]
 
         item_ids = cart.get('items', [])
-        print("CART ORDER ITEMS: ", item_ids)
         
         items = []
 
@@ -61,8 +60,6 @@ class Order:
             'tax': tax,
             'delivery_method': delivery_method
             })
-
-        print("CART ITEMS IN ORDER: ", cart.get('items'))
 
         if delivery_method == 'delivery':
             get_mongo().orders.update_one({'order_id': order_id, 'customer_id': customer_id}, {'$set': {'shipping_address': shipping_address}})

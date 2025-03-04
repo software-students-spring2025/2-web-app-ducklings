@@ -157,7 +157,7 @@ def cart():
                 item['quantity'] = item_quantity
                 item['total'] = Cart.get_item_count(customer_id, item_id) * item.get('price')
                 cart_items.append(item)
-    print(cart_items)
+
     return rt('cart.html', cart_items=cart_items, total_items=total_items, total_price=total_price)
 
 
@@ -223,9 +223,6 @@ def submit_order():
 
     if not zip_code.isdigit() or len(zip_code) != 5:
         return "Invalid zip code. Zip code must be 5 digits.", 400
-    
-    print("Is method delivery: ", delivery_method, (delivery_method == 'delivery'))
-    print("Shipping address: ", shipping_address)
     
     if delivery_method == "delivery" and not shipping_address:
         return "Please enter shipping address for delivery", 400

@@ -4,9 +4,9 @@ def get_mongo():
     return db 
      
 '''
-doc in progress:
-contains all items, keeps track of total price of items in cart
+Contains all items, keeps track of total amount and price of items in cart
 Every customer gets only one cart, unique identifier is customerID
+Customers can add to, edit, and clear (delete) their cart
 
 '''
 
@@ -34,7 +34,6 @@ class Cart:
         # add item into cart ONLY if item exists
         item = get_mongo().menu_items.find_one({'item_id': item_id})
         if item:
-            #print("ITEM EXISTS")
 
             item_price = item.get('price') # add item price to total
             get_mongo().carts.update_one({'customer_id': customer_id}, {'$inc': {'total_price': item_price}})
