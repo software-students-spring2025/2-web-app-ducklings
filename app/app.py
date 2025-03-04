@@ -103,10 +103,7 @@ def submit_feedback():
 def thank_you():
     return "<h1>Thank you for your feedback!</h1>"
 
-'''
-TODO: Change categories so that you can search on the home page and get all results
-that match a certain keyword regardless of category
-'''
+
 @app.route('/order', methods=['GET'])
 def order():
     category = request.args.get('category', '').strip()
