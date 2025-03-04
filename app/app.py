@@ -90,6 +90,19 @@ def login():
 def contact():
     return rt('contact.html')
 
+@app.route('/submit_feedback', methods=['POST'])
+def submit_feedback():
+    message = request.form.get('message', '').strip()
+    email = request.form.get('email', '').strip()
+    if message and email:
+        with open("feedback.txt", "a") as file:
+            file.write(f"Email: {email}\nMessage: {message}\n{'-'*40}\n")
+    return rt('thank_you.html')
+
+@app.route('/thank_you')
+def thank_you():
+    return "<h1>Thank you for your feedback!</h1>"
+
 '''
 TODO: Change categories so that you can search on the home page and get all results
 that match a certain keyword regardless of category
